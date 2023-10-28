@@ -1,0 +1,66 @@
+<!-- navbar.component.html -->
+<nav class="bg-blue-500 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="text-2xl text-white font-semibold" routerLink="/">To-Do-App</a>
+      <div class="hidden md:flex space-x-4 nav-item" *ngIf="!isUserLogin">
+        <a class="text-white hover:text-gray-300" routerLink="/">Home</a>
+        <a class="text-white hover:text-gray-300" routerLink="/about">About</a>
+        <a class="text-white hover:text-gray-300" routerLink="/contact">Contact</a>
+        <a class="text-white hover:text-gray-300" routerLink="/login">Login</a>
+      </div>
+      <div class="hidden md:flex space-x-4 nav-item" *ngIf="isUserLogin">
+        <a class="text-white hover:text-gray-300" routerLink="/">Home</a>
+        <a class="text-white hover:text-gray-300" routerLink="/about">Add Task</a>
+        <a class="text-white hover:text-gray-300" routerLink="/contact">My Task</a>
+        <a class="text-white hover:text-gray-300" routerLink="">{{userName}}</a>
+      </div>
+      <div class="md:hidden">
+        <button
+          class="text-white hover:text-gray-300"
+          (click)="toggleMobileMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="md:hidden"
+        [ngClass]="{ 'block': mobileMenuOpen, 'hidden': !mobileMenuOpen }"
+      >
+        <a
+          class="text-white block py-2 hover:bg-blue-400"
+          routerLink="/"
+          (click)="closeMobileMenu()"
+        >
+          Home
+        </a>
+        <a
+          class="text-white block py-2 hover:bg-blue-400"
+          routerLink="/about"
+          (click)="closeMobileMenu()"
+        >
+          About
+        </a>
+        <a
+          class="text-white block py-2 hover:bg-blue-400"
+          routerLink="/contact"
+          (click)="closeMobileMenu()"
+        >
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+  
