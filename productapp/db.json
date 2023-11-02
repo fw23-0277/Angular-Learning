@@ -1,0 +1,57 @@
+{
+  "products": [
+    {
+      "title": "Laptop",
+      "description": "Something About Laptop",
+      "price": "45000",
+      "imageUrl": "https://media.istockphoto.com/id/1394988455/photo/laptop-with-a-blank-screen-on-a-white-background.jpg?s=1024x1024&w=is&k=20&c=1JQYD-7e9EfVR4LCekw-NvYxyX23U81k-TRFJ70SXqY=",
+      "quantity": "3",
+      "id": 1
+    },
+    {
+      "title": "Dell Laptop ",
+      "description": "Somethin about laptop ",
+      "price": "55000",
+      "imageUrl": "https://media.istockphoto.com/id/1362775618/photo/modern-new-office-black-laptop-on-white-background-front-view.jpg?s=1024x1024&w=is&k=20&c=5brdBmNiNeM2JgdnLpf5YNRcNd1coeGF2EjCBH49EUw=",
+      "quantity": "3",
+      "id": 2
+    },
+    {
+      "title": "Dell Laptop ",
+      "description": "Somethin about laptop ",
+      "price": "55000",
+      "imageUrl": "https://media.istockphoto.com/id/1362775618/photo/modern-new-office-black-laptop-on-white-background-front-view.jpg?s=1024x1024&w=is&k=20&c=5brdBmNiNeM2JgdnLpf5YNRcNd1coeGF2EjCBH49EUw=",
+      "quantity": "3",
+      "id": 3
+    },
+    {
+      "title": "Mobile ",
+      "description": "Somthing about mobile ",
+      "price": "250000",
+      "imageUrl": "https://img.etimg.com/thumb/msid-98897778,width-300,height-225,imgsize-35708,,resizemode-75/6-latest-mobile-phones-with-12gb-ram-in-india.jpg",
+      "quantity": "3",
+      "id": 4
+    },
+    {
+      "title": "Oppo  Mobile ",
+      "description": "Somethin about oppo mobile ",
+      "price": "45000",
+      "imageUrl": "https://img.etimg.com/thumb/msid-98897778,width-300,height-225,imgsize-35708,,resizemode-75/6-latest-mobile-phones-with-12gb-ram-in-india.jpg",
+      "quantity": "2",
+      "id": 5
+    }
+  ],
+  "productCart": [
+    {
+      "title": "Laptop",
+      "description": "Something About Laptop",
+      "price": "45000",
+      "imageUrl": "https://media.istockphoto.com/id/1394988455/photo/laptop-with-a-blank-screen-on-a-white-background.jpg?s=1024x1024&w=is&k=20&c=1JQYD-7e9EfVR4LCekw-NvYxyX23U81k-TRFJ70SXqY=",
+      "quantity": "3",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
