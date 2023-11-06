@@ -1,0 +1,48 @@
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+    <div *ngIf="userForm.controls.email.touched && userForm.controls.email.invalid" class="error">
+      <div *ngIf="userForm.controls.email.errors.required">Email is required.</div>
+      <div *ngIf="userForm.controls.email.errors.email">Invalid email format.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="user.password" required minlength="6">
+    <div *ngIf="userForm.controls.password.touched && userForm.controls.password.invalid" class="error">
+      <div *ngIf="userForm.controls.password.errors.required">Password is required.</div>
+      <div *ngIf="userForm.controls.password.errors.minlength">Password should be at least 6 characters long.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" [(ngModel)]="user.age" required min="18" max="99">
+    <div *ngIf="userForm.controls.age.touched && userForm.controls.age.invalid" class="error">
+      <div *ngIf="userForm.controls.age.errors.required">Age is required.</div>
+      <div *ngIf="userForm.controls.age.errors.min">Age should be at least 18.</div>
+      <div *ngIf="userForm.controls.age.errors.max">Age should be less than 99.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="country">Country</label>
+    <select id="country" name="country" [(ngModel)]="user.country" required>
+      <option value="">Select a country</option>
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+      <!-- Add more options as needed -->
+    </select>
+    <div *ngIf="userForm.controls.country.touched && userForm.controls.country.invalid" class="error">
+      <div *ngIf="userForm.controls.country.errors.required">Country is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Acceptance</label>
+    <input type="checkbox" name="acceptance" [(ngModel)]="user.acceptance" required>
+    <div *ngIf="userForm.controls.acceptance.touched && userForm.controls.acceptance.invalid" class="error">
+      <div *ngIf="userForm.controls.acceptance.errors.required">You must accept the terms and conditions.</div>
+    </div>
+  </div>
