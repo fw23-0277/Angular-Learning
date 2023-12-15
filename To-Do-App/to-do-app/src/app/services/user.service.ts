@@ -1,25 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserSiggIn, UserSignUp } from '../types/user';
-import { Observable } from 'rxjs';
+import { UserSiggIn, UserSignUp } from '../interface/user';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
+  private baseUrl: String = 'http://localhost:8080/auth';
+  
 
-  private baseUrl:String = "http://localhost:8080/auth";
+  constructor(private http: HttpClient, private router: Router) {}
 
-  constructor(private http:HttpClient, private router: Router) { }
-
-
-  userSignUp(userData:UserSignUp):Observable<Object>{
-     return this.http.post(`${this.baseUrl}/signup`,userData);
+  userSignUp(userData: UserSignUp): Observable<Object> {
+    return this.http.post(`${this.baseUrl}/signup`, userData);
   }
 
-  userSignIn(userLoginData:UserSiggIn){
-    return this.http.post(`${this.baseUrl}/signin`,userLoginData)
+  userSignIn(userLoginData: UserSiggIn) {
+    return this.http.post(`${this.baseUrl}/signin`, userLoginData);
   }
 
+ 
+  
 }

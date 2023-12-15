@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'to-do-app';
+
+  isUserLogin:boolean = false
+
+  checkUserLogin(value: any){
+    console.log(value)
+  }
 }

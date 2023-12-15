@@ -31,7 +31,7 @@ public class JwtValidator extends OncePerRequestFilter {
 		String jwt = request.getHeader(JwtConstant.JWT_HEADER);
 		
 		if(jwt != null) {
-			jwt = jwt.substring(0);
+			jwt = jwt.substring(7);
 			
 			try {
 				SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes());
